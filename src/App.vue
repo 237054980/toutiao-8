@@ -1,15 +1,22 @@
 <template>
   <div id="app">
-    <h1>头条</h1>
+    
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name:'App'
+  name:'APP'
 }
 </script>
+
+
 <style lang="less">
+//body{
+  //width: 400px;
+ // background-color: blue;
+  //height: 100%;
+//}
 
 </style>

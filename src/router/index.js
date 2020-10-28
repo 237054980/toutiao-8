@@ -51,6 +51,16 @@ const routes = [
     props: true
 
   },
+  {
+    path:'/user/profile',
+    name:'user-profile',
+    component: () => import('@/components/UserName/UserProfile')
+  },
+  {
+    path:'/user/chat',
+    name:'user-chat',
+    component: () => import('@/components/UserName/UserChat')
+  },
 ]
   
 

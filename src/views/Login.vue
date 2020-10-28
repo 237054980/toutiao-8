@@ -63,7 +63,6 @@
                         class="login-btu" 
                         type="info" 
                         block
-                        
                     >登录</van-button>
                 </div>
         </van-form>
@@ -80,8 +79,8 @@ export default {
     data(){
         return{
             user:{
-                mobile:'',  //手机号
-                code:'',   //验证码
+                mobile:'18691370906',  //手机号
+                code:'246810',   //验证码
             },
             formRules:{
                 mobile:[
@@ -111,7 +110,7 @@ export default {
            try {
                 const { data } = await login(this.user)
             //4.处理响应结果
-                //console.log(res)
+                // console.log(data)
                 Toast.success('登录成功')
 
             //将后端返回的用户状态(token等数据) 放到Vuex 容器中
@@ -119,9 +118,9 @@ export default {
             //登录成功,跳转回原来页面
                 this.$router.back()
            }catch(err){
-               console.log(err)
+               // console.log(err)
                Toast.fail('登录失败,手机号或验证码不正确')
-               this.$router.back()
+                this.$router.back()
            }
             
         },
@@ -199,6 +198,11 @@ export default {
     .send-but{
         width: 78px;
         height:26px;
+        background-color: #ededed;
+        .van-button__text{
+            font-size: 11px;
+            color: #666;
+        }
     }
     .login-btu-wrap{
         padding: 26px 16px;

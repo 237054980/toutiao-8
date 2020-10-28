@@ -10,7 +10,12 @@
           src="https://img.yzcdn.cn/vant/cat.jpeg"
         />
         <div class="name" slot="title">昵称</div>
-        <van-button class="update-btn" size="small" round>编辑资料</van-button>
+        <van-button 
+            class="update-btn" 
+            size="small" 
+            round
+            to="/user/profile"
+        >编辑资料</van-button>
       </van-cell>
       <van-grid class="data-info" :border="false">
         <van-grid-item class="data-info-item">
@@ -45,7 +50,9 @@
       <van-grid-item class="nav-grid-item" icon-prefix="iconfont icon" icon="3lishi" text="历史" />
     </van-grid>
     <van-cell title="消息通知" is-link to />
-    <van-cell title="小智同学" is-link to class="mb-4" />
+    <van-cell title="小智同学" is-link to class="mb-4" @click="$router.push('/user/chat')" />
+      
+    
 
     <van-cell class="logout-cell" title="退出" @click="onLogout" />
   </div>
@@ -57,6 +64,7 @@ import { getCurrentUser } from '@/api/user'
 
 export default {
   name: "My",
+ 
   data() {
     return {
       currentUser: {}  //当前用户登录信息

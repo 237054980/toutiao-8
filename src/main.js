@@ -1,6 +1,5 @@
 import Vue from 'vue'
-//加载全局样式
-import less from'./styles/index.less'
+
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -9,7 +8,8 @@ import 'amfe-flexible'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 //import './utils/dayjs.js'
-
+//加载全局样式
+import less from'./styles/index.less'
 
 
 Vue.use(Vant);
